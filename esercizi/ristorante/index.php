@@ -5,9 +5,6 @@
 
     <body>
 
-    <h1>PASTA AL PESTO</h1>
-    <h2></h2>
-
     <style>
 
     #Pastaalpesto
