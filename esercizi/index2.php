@@ -6,8 +6,6 @@
     <style>
         body 
         {
-            margin: 0;
-            padding: 0;
             font-family: Times New Roman',  Times, serif;
         }
 
@@ -25,35 +23,37 @@
 
         .sezioni-di-piatti 
         {
-            flex: 0 0 calc(50% - 20px);
             box-sizing: border-box;
-            padding: 20px;
-            text-align: center; /* Allinea il testo al centro */
         }
-
 
         .even 
         {
-            background-color: #AFEEEE;
+            background-color: #FFF5EE;
         }
 
         .odd 
         {
-            background-color: #DDA0DD;
+            background-color: #E6E6FA;
         }
 
         img 
         {
-            max-width: 400px;
-            max-height: 400px;
-            margin-right: 10px;
-            margin-left: 700px;
+            max-width: 350px;
+            max-height: 350px;
+            margin-right: 200px;
+            margin-left: 450px;
+            margin-top: 20px;
+        }
+
+        .dettaglipiatti 
+        {
+            text-align: center;
         }
     </style>
 
 </head>
 
-<body bgcolor="#EEE8AA">
+<body bgcolor="#A52A2A">
 
 <h1><b> RISTORANTE DA VITTORIA </b></h1>
 <h2> Primi Piatti </h2>
@@ -62,9 +62,9 @@
     $menuprimi = 
     [
     "Pasta al pesto" => ["prezzo" => 10, "ingredienti" => "Spaghetti, basilico, pinoli, olio, parmiggiano reggiano", "immagine" => "https://www.fattoincasadabenedetta.it/wp-content/uploads/2022/07/AdobeStock_235021478-1200x900.jpg"],
-    "Pasta alla carbonara" => ["prezzo" => 10, "ingredienti" => "Spaghetti, uova, pecorino, guanciale", "immagine" => "carbonara.jpg"],
-    "Gnocchi ai 4 formaggi" => ["prezzo" => 10, "ingredienti" => "Gnocchi, gorgonzola, pecorino, parmiggiano reggiano", "immagine" => "gnocchi.jpg"],
-    "Ravioli alla zucca" => ["prezzo" => 10, "ingredienti" => "Ravioli, zucca, grana padano", "immagine" => "ravioli.jpg"]
+    "Pasta alla carbonara" => ["prezzo" => 10, "ingredienti" => "Spaghetti, uova, pecorino, guanciale", "immagine" => "https://www.giallozafferano.it/images/219-21928/Spaghetti-alla-Carbonara_650x433_wm.jpg"],
+    "Gnocchi ai 4 formaggi" => ["prezzo" => 10, "ingredienti" => "Gnocchi, gorgonzola, pecorino, parmiggiano reggiano", "immagine" => "https://www.fattoincasadabenedetta.it/wp-content/uploads/2023/01/sito-08-Gnocchi-ai-4-formaggi_cover.jpg"],
+    "Ravioli alla zucca" => ["prezzo" => 10, "ingredienti" => "Ravioli, zucca, grana padano", "immagine" => "https://www.cucchiaio.it/content/cucchiaio/it/ricette/2009/12/ricetta-tortelli-zucca/_jcr_content/header-par/image_single.img.jpg/1634034344612.jpg"]
     ];
 
     $count = 0; 
@@ -73,10 +73,10 @@
     {
         $class = ($count % 2 == 0) ? 'even' : 'odd';
         echo "<div class='.sezioni-di-piatti $class'>";
-        echo "<h3>{$piatto}</h3>";
         echo "<img src='{$dettaglipiatti['immagine']}' alt='{$piatto}'>";
-        echo "<p><b>Prezzo:</b> {$dettaglipiatti['prezzo']} Euro</p>";
-        echo "<p><b>Ingredienti:</b> {$dettaglipiatti['ingredienti']}</p>";
+        echo "<h3 class='.dettaglipiatti'>{$piatto}</h3>";
+        echo "<p class='.dettaglipiatti'><b>Prezzo:</b> {$dettaglipiatti['prezzo']} Euro</p>";
+        echo "<p class='.dettaglipiatti'><b>Ingredienti:</b> {$dettaglipiatti['ingredienti']}</p>";
         echo "</div>";
         $count++;
 }
