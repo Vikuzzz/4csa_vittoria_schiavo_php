@@ -48,7 +48,7 @@
         .dettaglipiatti 
         {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     </style>
 
@@ -75,9 +75,9 @@
         $class = ($count % 2 == 0) ? 'even' : 'odd';
         echo "<div class='.sezioni-di-piatti $class'>";
         echo "<img src='{$dettaglipiatti['immagine']}' alt='{$piatto}'>";
-        echo "<h3 class='.dettaglipiatti'>{$piatto}</h3>";
-        echo "<p class='.dettaglipiatti'><b>Prezzo:</b> {$dettaglipiatti['prezzo']} Euro</p>";
-        echo "<p class='.dettaglipiatti'><b>Ingredienti:</b> {$dettaglipiatti['ingredienti']}</p>";
+        echo "<h3 class='dettaglipiatti'>{$piatto}</h3>";
+        echo "<p class='dettaglipiatti'><b>Prezzo:</b> {$dettaglipiatti['prezzo']} Euro</p>";
+        echo "<p class='dettaglipiatti'><b>Ingredienti:</b> {$dettaglipiatti['ingredienti']}</p>";
         echo "</div>";
         $count++;
 }
