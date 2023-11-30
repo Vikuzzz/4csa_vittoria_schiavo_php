@@ -6,15 +6,29 @@
 
 </head>
 
-<body>
+<body bgcolor="#2CD3E7">
 
-<h1><b> BENVENUT* NEL FORM CHE HAI COMPILATO, QUESTE SONO LE TUE INFORMAZIONI. </b></h1>
+<style>
+    
+    table 
+    {
+        margin: auto;
+    }
+
+    th, td
+    {
+        text-align: center;
+    }
+
+    </style>
+
+<h1 style="color:#A52A2A; text-align: center; font-family: Times New Roman', Times, serif;"><b> BENVENUT* NEL FORM CHE HAI COMPILATO, QUESTE SONO LE TUE INFORMAZIONI. </b></h1>
 
 <table class="table">
     <thead>
         <tr>
             <th>COSA RICHIESTA</th>
-            <th>INFORMAZIONI</ht>
+            <th>INFORMAZIONI</th>
         </tr>
     </thead>
         
@@ -29,7 +43,6 @@
         ?>
     </tbody>
 </table>
-
 
 </body>
 </html>
