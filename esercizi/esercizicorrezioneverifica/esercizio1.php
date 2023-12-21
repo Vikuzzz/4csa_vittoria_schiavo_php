@@ -12,22 +12,23 @@
         
     <?php
 
-        echo "<table>";
+        echo "<table border = '1' style='margin: auto; font-weight: bold;'>";
 
-        // Creare le righe della tabella
-        for ($righe = 0; $righe < $numero1; $righe++) 
-        {
-            echo "<tr>";
-            // Creare le colonne della tabella
-            
-            for ($colonne = 0; $colonne < $numero2; $colonne++) 
+           // Creare le righe della tabella
+            for ($righe = 0; $righe < $_GET['Numero1']; $righe++) 
             {
-                echo "<td>$testo</td>";
-            }
+                echo "<tr>";
+                // Creare le colonne della tabella
+            
+                for ($colonne = 0; $colonne < $_GET['Numero2']; $colonne++) 
+                {
+                    echo "<td>";
+                    echo $_GET['Testo']."</td>";
+                }
     
                 echo "</tr>";
-
-        }
+            }
+        
 
         echo "</table>";
 
