@@ -10,20 +10,28 @@
 
 <h1 style="color:#A52A2A; text-align: center; font-family: Times New Roman', Times, serif;"><b> BENVENUT* IN QUESTO SITO WEB, ORA DEVI INSERIRE LE INFORMAZIONI CHE PREFERISCI. </b></h1>
         
-        <?php
+    <?php
 
         echo "<table>";
 
-        foreach ($_GET as $Testo) 
+        // Creare le righe della tabella
+        for ($righe = 0; $righe < $numero1; $righe++) 
+        {
+            echo "<tr>";
+            // Creare le colonne della tabella
+            
+            for ($colonne = 0; $colonne < $numero2; $colonne++) 
             {
-                echo " <table> ";
-                echo " <td> $Testo </td> ";
-                echo " </table> ";
-            }        
-        
+                echo "<td>$testo</td>";
+            }
+    
+                echo "</tr>";
+
+        }
+
         echo "</table>";
 
-        ?>
+    ?>
 
 </body>
 </html>
