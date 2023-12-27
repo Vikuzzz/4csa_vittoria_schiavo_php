@@ -24,35 +24,32 @@
 
 <h1 style="color:#A52A2A; text-align: center; font-family: Times New Roman', Times, serif;"><b> BENVENUT* NEL FORM CHE HAI COMPILATO, QUESTE SONO LE TUE INFORMAZIONI. </b></h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>COSA RICHIESTA</th>
-            <th>INFORMAZIONI</th>
-        </tr>
-    </thead>
-        
-    <tbody>
-
     <?php
 
     $passwordgiusta = "info2023";
     $utentegiusto = "utente";
     $contatoretentativi = 0;
 
-    if($_GET['password'] == $passwordgiusta && $_GET['Nome'] ==  $utentegiusto && $contatoretentativi <= 3)
+    if($_GET['password'] == $passwordgiusta && $_GET['nome'] ==  $utentegiusto && $contatoretentativi <= 3)
     {
 
         echo "<h1 style='color:black; text-align:center;'> Hai eseguito l'accesso correttamente! </h1>";
 
+    }else if($_GET['password'] == $passwordgiusta && $_GET['nome'] !=  $utentegiusto && $contatoretentativi <= 3)
+    {
+
+        echo "<h1 style='color:black; text-align:center;'> Nome utente sbagliato! Riprova a rienserire i tuoi dati fino allo scadere dei tentativi. </h1>";
+
+    }else if($_GET['password'] != $passwordgiusta && $_GET['nome'] ==  $utentegiusto && $contatoretentativi <= 3)
+    {
+
+        echo "<h1 style='color:black; text-align:center;'> Passoword errata. Riprova a rienserire i tuoi dati fino allo scadere dei tentativi. </h1>";
+
     }else
     {
-        if($contatoretentativi > 3)
-        {
 
-            echo "<h1 style='color:black; text-align:center;'> Il tuo accesso è negato. Tentativi di inserimento password esauriti. </h1>";
+        echo "<h1 style='color:black; text-align:center;'> Il tuo accesso è negato. Password e/o utente sono errati! Attenzione hai tre tentativi. </h1>";
         
-        }
     }
             
         ?>
