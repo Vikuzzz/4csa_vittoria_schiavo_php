@@ -8,20 +8,6 @@
 
 <body bgcolor="#2CD3E7">
 
-<style>
-    
-    table 
-    {
-        margin: auto;
-    }
-
-    th, td
-    {
-        text-align: center;
-    }
-
-</style>
-
 <h1 style="color:#A52A2A; text-align: center; font-family: Times New Roman', Times, serif;"><b> BENVENUT* NEL FORM CHE HAI COMPILATO, QUESTE SONO LE TUE INFORMAZIONI. </b></h1>
 
     <?php
