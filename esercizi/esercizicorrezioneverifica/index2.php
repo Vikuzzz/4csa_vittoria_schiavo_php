@@ -14,7 +14,6 @@
 
     $passwordgiusta = "info2023";
     $utentegiusto = "utente";
-    $contatoretentativi = 0;
     $tentativimassimi = 3;
 
     if($_GET['password'] == $passwordgiusta && $_GET['nome'] ==  $utentegiusto && $contatoretentativi <= $tentativimassimi)
@@ -26,21 +25,21 @@
     {
 
         echo "<h1 style='color:black; text-align:center;'> Nome utente sbagliato! Riprova a rienserire i tuoi dati fino allo scadere dei tentativi. </h1>";
-        echo "<a href=\"esercizio2.html\">Torna al form</a>";
+        echo "<a href=\"index2.html\">Torna al form</a>";
         $contatoretentativi++;
 
     }else if($_GET['password'] != $passwordgiusta && $_GET['nome'] ==  $utentegiusto && $contatoretentativi <= $tentativimassimi)
     {
 
         echo "<h1 style='color:black; text-align:center;'> Passoword errata. Riprova a rienserire i tuoi dati fino allo scadere dei tentativi. </h1>";
-        echo "<a href=\"esercizio2.html\">Torna al form</a>";
+        echo "<a href=\"index2.html\">Torna al form</a>";
         $contatoretentativi++;
 
     }else if($_GET['password'] != $passwordgiusta && $_GET['nome'] !=  $utentegiusto && $contatoretentativi <= $tentativimassimi)
     {
 
         echo "<h1 style='color:black; text-align:center;'> Passoword e nome utente errati. Riprova a rienserire i tuoi dati fino allo scadere dei tentativi. </h1>";
-        echo "<a href=\"esercizio2.html\">Torna al form</a>";
+        echo "<a href=\"index2.html\">Torna al form</a>";
         $contatoretentativi++;
 
     }
